@@ -115,14 +115,14 @@ module top_tb;
     for (i = 0; i < num; i=i+1)
     begin
       if(M1.bram[i] !== GOLDEN[i])begin
-        //$display("DM[%4d] = %h, expect = %h", i, M1.bram[i], GOLDEN[i]);
+        $display("DM[%4d] = %h, expect = %h", i, M1.bram[i], GOLDEN[i]);
         err = err + 1;
       end
       
       
       else
       begin
-        //$display("DM[%4d] = %h, pass",  i, M1.bram[i]);
+        $display("DM[%4d] = %h, pass",  i, M1.bram[i]);
       end
       
     end
@@ -150,18 +150,18 @@ module top_tb;
     for (i = 0; i < num; i=i+1)
     begin
       if(M1.bram[i] !== GOLDEN[i])begin
-        //$display("DM[%4d] = %h, expect = %h", i, M1.bram[i], GOLDEN[i]);
+        $display("DM[%4d] = %h, expect = %h", i, M1.bram[i], GOLDEN[i]);
         err = err + 1;
       end
       
       
       else
       begin
-        //$display("DM[%4d] = %h, pass",  i, M1.bram[i]);
+        $display("DM[%4d] = %h, pass",  i, M1.bram[i]);
       end
       
     end
-    //$display("SIM_END no finish!!!");
+    $display("SIM_END no finish!!!");
     result(num, num);
     $finish;
   end
@@ -175,7 +175,7 @@ module top_tb;
       $fdisplay(rf, "%d,%d", num - err, num);
       if (err === 0)
       begin
-       /* $display("\n");
+        $display("\n");
         $display("\n");
         $display("        ****************************               ");
         $display("        **                        **       |\__||  ");
@@ -184,11 +184,11 @@ module top_tb;
         $display("        **  Simulation PASS!!     **   /^ ^ ^ \\  |");
         $display("        **                        **  |^ ^ ^ ^ |w| ");
         $display("        ****************************   \\m___m__|_|");
-        $display("\n");*/
+        $display("\n");
       end
       else
       begin
-       /* $display("\n");
+        $display("\n");
         $display("\n");
         $display("        ****************************               ");
         $display("        **                        **       |\__||  ");
@@ -198,7 +198,7 @@ module top_tb;
         $display("        **                        **  |^ ^ ^ ^ |w| ");
         $display("        ****************************   \\m___m__|_|");
         $display("         Totally has %d errors                     ", err); 
-        $display("\n");*/
+        $display("\n");
       end
     end
   endtask
