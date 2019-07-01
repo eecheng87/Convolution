@@ -6,7 +6,7 @@ develop by `vivado` + `verilog` + `python` to accelerate Convolution algorithm
 
 run `jupyter notebook` and you will get answer which named `output.hex`
 
-only if you want add you custom input, just modified `input.hex`
+only if you want add your custom input, just modified `input.hex`
 
 following is design block
 
